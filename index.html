@@ -30,39 +30,41 @@
           </a>
           <ul class="nav-menu list">
             <li class="item">
-              <a href="#" class="page-menu current link" rel="nopener noreferrer"
+              <a href="#" class="page current link" rel="nopener noreferrer"
                 >Studio</a
               >
             </li>
             <li class="item">
-              <a href="./portfolio.html" class="page-menu menu-underline link">Portfolio</a>
+              <a href="./portfolio.html" class="page link">Portfolio</a>
             </li>
             <li class="item">
-              <a href="#" class="page-menu menu-underline link">Contacts</a>
+              <a href="#" class="page link">Contacts</a>
             </li>
           </ul>
         </nav>
         <ul class="contacts-menu list">
-          <li>
+          <li class="item">
             <a href="mailto:info@devstudio.com" class="contact link"
               >info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="item">
             <a href="tel:+110001111111" class="contact link"
               >+11 (000) 111-11-11</a
             >
           </li>
         </ul>
-        <!-- <div class="hamburger-container"> -->
-          <button type="button"
+        <div class="hamburger-container">
+          <button
             class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
           >
-            <svg class="hamburger-menu-icon">
+            <svg class="hamburger-menu-icon" width="32" height="22">
               <use href="./images/icons.svg#menu-hamburger"></use>
             </svg>
           </button>
-        <!-- </div> -->
+        </div>
       </div>
     </header>
 
@@ -91,9 +93,7 @@
               </div>
               <h3 class="title">Strategy</h3>
               <p class="description">
-                Our goal is to identify the business <br class="break"/>
-                problem to walk away with the <br class="break"/>
-                perfect and creative solution.
+                Our goal is to identify the business problem to walk away with the perfect and creative solution.
               </p>
             </li>
             <li class="benefits-item">
@@ -104,9 +104,7 @@
               </div>
               <h3 class="title">Punctuality</h3>
               <p class="description">
-                Bring the key message to the <br class="break"/>
-                brand's audience for the best price <br class="break"/>
-                within the shortest possible time.
+                Bring the key message to the brand's audience for the best price within the shortest possible time.
               </p>
             </li>
             <li class="benefits-item">
@@ -117,9 +115,7 @@
               </div>
               <h3 class="title">Diligence</h3>
               <p class="description">
-                Research and confirm brands that <br class="break"/>
-                present the strongest digital growth <br class="break" />
-                opportunities and minimize risk.
+                Research and confirm brands that present the strongest digital growth opportunities and minimize risk.
               </p>
             </li>
             <li class="benefits-item">
@@ -130,9 +126,7 @@
               </div>
               <h3 class="title">Technologies</h3>
               <p class="description">
-                Design practice focused on digital <br class="break"/>
-                experiences. We bring forth a deep <br class="break"/>
-                passion for problem-solving.
+                Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.
               </p>
             </li>
           </ul>
@@ -425,7 +419,7 @@
       </section>
 
       <!-- section 5 customers -->
-      <section class="customer-section section">
+      <section class="section customer-section">
         <div class="container">
           <h2 class="section-title">Customers</h2>
           <ul class="customer list">
@@ -555,6 +549,7 @@
           </div>
       </div>
     </footer>
+    
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -610,21 +605,60 @@
     <!-- mobile menu display -->
     <div class="menu-container js-menu-container" id="mobile-menu">
       <button class="menu-toggle js-close-menu">
-        <svg
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          ></path>
+        <svg class="close-icon" width="11" height="11">
+          <use href="./images/icons.svg#close-button"></use>
         </svg>
       </button>
 
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item">
+          <a href="./index.html" class="hamburger-menu-link current link">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="./portfolio.html" class="hamburger-menu-link link">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="./contacts.html" class="hamburger-menu-link link">Contacts</a>
+        </li>
+
+        <ul class="mobile-contact-link list">
+          <li class="mobile-contact-item">
+            <a href="tel:+110001111111" class="hamburger-contact-link link">+11 (000) 111-11-11</a>
+          </li>
+          <li class="mobile-contact-item">
+            <a href="mailto:info@devstudio.com" class="hamburger-contact-link email-link link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-menu-social-list list">
+          <li class="mobile-social-item">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#icon-instagram"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#icon-twitter"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#icon-facebook"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              ><svg class="icon footer-social-profile" width="40" height="40">
+                <use href="./images/icons.svg#icon-linkedin"></use></svg
+            ></a>
+          </li>
+        </ul>
+      </ul>
     </div>
 
     <script src="./js/modal.js"></script>
